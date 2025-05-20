@@ -7,7 +7,7 @@ app = FastAPI()
 class Post(BaseModel):
     title: str
     content: str
-    date: datetime = Field(default_factory=datetime.utcnow)  # set current time by default
+    date: datetime = Field(default_factory=datetime.now())  # set current time by default
 
 @app.get('/hello')
 async def say_hello():
